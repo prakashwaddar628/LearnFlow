@@ -1,4 +1,4 @@
-import GoalInput from "@/pages/GoalInput";
+import GoalInput from "@/components/GoalInput";
 
 export default function Home() {
   return (
