@@ -26,7 +26,7 @@ export default function GoalInput() {
           className='border p-2 w-full mb-4'
           placeholder="e.g. Learn Data Structures in Python"
         />
-        <button type="submit" className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors'>
+        <button type="submit" className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors cursor-pointer'>
         Generate Course Plan
         </button>
       </form>
