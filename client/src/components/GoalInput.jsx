@@ -11,7 +11,7 @@ export default function GoalInput() {
         e.preventDefault();
 
         // Logic to handle goal submission
-        const res = await axios.post("http://localhost:3000/api/goals", {goal})
+        const res = await axios.post("http://localhost:5000/api/goals", {goal})
         alert("Goal Saved: " + res.data.message);
         setGoal('');
     }

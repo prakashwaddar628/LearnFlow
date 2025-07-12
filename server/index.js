@@ -14,10 +14,11 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 const goalSchema = new mongoose.Schema({goal: String});
 const Goal = mongoose.model('Goal', goalSchema);
 
-app.get('/api/goals', async (req, res)=>{
-    const goal = new Goal({goal: req.body.goal});
-    await goal.save();
-    res.status(201).json(goal);
+app.post('/api/goals', async (req, res)=>{
+    const { goal } = req.body;
+    const newGoal = new Goal({ goal });
+    await newGoal.save();
+    res.status(201).json(newGoal);
 })
 
 app.listen('5000', ()=> console.log ('Server running on port 5000'));
